@@ -150,17 +150,39 @@ const HomeBlocks = () => {
             </div>
 
             <div
-              className={`${secondaryBlock} w-full h-full mr-5 text-[#F9F1F0] p-5 relative cursor-pointer transition-transform duration-700 ease-out ${
+              className={`${secondaryBlock} w-full h-full mr-5 text-[#F9F1F0] p-5 relative cursor-pointer transition-all duration-700 ease-out ${
                 isBlockVisible
-                  ? "translate-y-0 opacity-100"
-                  : "translate-y-[200%] opacity-0"
+                  ? "opacity-100 translate-y-0"
+                  : "opacity-0 translate-y-5"
               }`}
             >
               <div className="flex justify-between w-full">
-                <p className="w-[100px]">Have some questions?</p>
-                <Image src={arrowImage} alt="" />
+                <p
+                  className={`transition-all duration-700 ease-out delay-[300ms] ${
+                    isBlockVisible
+                      ? "opacity-100 translate-x-0"
+                      : "opacity-0 translate-x-[-20px]"
+                  }`}
+                >
+                  Have some questions?
+                </p>
+                <Image
+                  src={arrowImage}
+                  alt=""
+                  className={`transition-all duration-700 ease-out delay-[500ms] ${
+                    isBlockVisible
+                      ? "opacity-100 translate-x-0"
+                      : "opacity-0 translate-x-[20px]"
+                  }`}
+                />
               </div>
-              <h2 className="bottom-5 absolute font-extrabold text-[64px]">
+              <h2
+                className={`bottom-5 absolute font-extrabold text-[64px] transition-all duration-700 ease-out delay-[700ms] ${
+                  isBlockVisible
+                    ? "opacity-100 translate-y-0"
+                    : "opacity-0 translate-y-[10px]"
+                }`}
+              >
                 Contact me
               </h2>
             </div>
