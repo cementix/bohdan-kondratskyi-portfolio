@@ -191,23 +191,90 @@ const HomeBlocks = () => {
       </div>
       <div className="flex flex-col gap-5 col-span-1">
         <div
-          className={`${primaryBlock} h-[649px] flex flex-col text-[25px] font-bold p-5 transition-transform duration-700 ease-out ${
+          className={`${primaryBlock} h-[649px] flex flex-col text-[25px] font-bold p-5 transition-all duration-700 ease-out ${
             isBlockVisible
-              ? "scale-100 translate-x-0 translate-y-0 opacity-100"
-              : "scale-0 translate-x-[-50%] translate-y-[20%] opacity-0"
+              ? "opacity-100 translate-y-0"
+              : "opacity-0 translate-y-5"
           }`}
         >
           <div className="flex justify-between items-center mb-2 w-full">
-            <p>GitHub</p>
-            <Image src={arrowBlackImage} alt="" />
+            <p
+              className={`transition-all duration-700 ease-out delay-[300ms] ${
+                isBlockVisible
+                  ? "opacity-100 translate-y-0"
+                  : "opacity-0 translate-y-5"
+              }`}
+            >
+              GitHub
+            </p>
+            <Image
+              src={arrowBlackImage}
+              alt=""
+              className={`transition-all duration-700 ease-out delay-[500ms] ${
+                isBlockVisible
+                  ? "opacity-100 translate-y-0"
+                  : "opacity-0 translate-y-5"
+              }`}
+            />
           </div>
-          <Image src={githubImage} alt="" className="rounded-xl" height={293} />
-          <hr className="border-[#274244] mt-5 mb-5 border-t-[3px] rounded-xl" />
-          <p className="cursor-pointer">LeetCode</p>
-          <hr className="border-[#274244] mt-5 mb-5 border-t-[3px] rounded-xl" />
-          <p className="cursor-pointer">CodeWars</p>
-          <hr className="border-[#274244] mt-5 mb-5 border-t-[3px] rounded-xl" />
-          <p className="cursor-pointer">Curriculum Vitae</p>
+          <Image
+            src={githubImage}
+            alt=""
+            className={`rounded-xl transition-all duration-700 ease-out delay-[600ms] ${
+              isBlockVisible
+                ? "opacity-100 translate-y-0"
+                : "opacity-0 translate-y-5"
+            }`}
+            height={293}
+          />
+          <hr
+            className={`border-[#274244] mt-5 mb-5 border-t-[3px] rounded-xl transition-all duration-700 ease-out delay-[700ms] ${
+              isBlockVisible
+                ? "opacity-100 translate-x-0"
+                : "opacity-0 translate-x-[-100%]"
+            }`}
+          />
+          <p
+            className={`cursor-pointer transition-all duration-700 ease-out delay-[800ms] ${
+              isBlockVisible
+                ? "opacity-100 translate-y-0"
+                : "opacity-0 translate-y-5"
+            }`}
+          >
+            LeetCode
+          </p>
+          <hr
+            className={`border-[#274244] mt-5 mb-5 border-t-[3px] rounded-xl transition-all duration-700 ease-out delay-[900ms] ${
+              isBlockVisible
+                ? "opacity-100 translate-x-0"
+                : "opacity-0 translate-x-[100%]"
+            }`}
+          />
+          <p
+            className={`cursor-pointer transition-all duration-700 ease-out delay-[1000ms] ${
+              isBlockVisible
+                ? "opacity-100 translate-y-0"
+                : "opacity-0 translate-y-5"
+            }`}
+          >
+            CodeWars
+          </p>
+          <hr
+            className={`border-[#274244] mt-5 mb-5 border-t-[3px] rounded-xl transition-all duration-700 ease-out delay-[1100ms] ${
+              isBlockVisible
+                ? "opacity-100 translate-x-0"
+                : "opacity-0 translate-x-[-100%]"
+            }`}
+          />
+          <p
+            className={`cursor-pointer transition-all duration-700 ease-out delay-[1200ms] ${
+              isBlockVisible
+                ? "opacity-100 translate-y-0"
+                : "opacity-0 translate-y-5"
+            }`}
+          >
+            Curriculum Vitae
+          </p>
         </div>
 
         <div
@@ -218,9 +285,33 @@ const HomeBlocks = () => {
           }`}
         >
           <div className="flex justify-center items-center gap-20 w-full h-full">
-            <p className="cursor-pointer">INSTAGRAM</p>
-            <p className="cursor-pointer">TELEGRAM</p>
-            <p className="cursor-pointer">LINKEDIN</p>
+            <p
+              className={`cursor-pointer transition-all duration-700 ease-out delay-[300ms] ${
+                isBlockVisible
+                  ? "opacity-100 translate-y-0"
+                  : "opacity-0 translate-y-5"
+              }`}
+            >
+              INSTAGRAM
+            </p>
+            <p
+              className={`cursor-pointer transition-all duration-700 ease-out delay-[500ms] ${
+                isBlockVisible
+                  ? "opacity-100 translate-y-0"
+                  : "opacity-0 translate-y-5"
+              }`}
+            >
+              TELEGRAM
+            </p>
+            <p
+              className={`cursor-pointer transition-all duration-700 ease-out delay-[700ms] ${
+                isBlockVisible
+                  ? "opacity-100 translate-y-0"
+                  : "opacity-0 translate-y-5"
+              }`}
+            >
+              LINKEDIN
+            </p>
           </div>
         </div>
       </div>

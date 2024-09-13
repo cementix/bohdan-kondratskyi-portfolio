@@ -18,13 +18,44 @@ const Navbar = () => {
         isNavbarVisible ? "scale-100 opacity-100" : "scale-0 opacity-0"
       }`}
     >
-      <h2 className="font-thin text-[25px]">
-        BOHDAN <span className="font-gilroyBold">KONDRATSKYI</span>
+      <h2
+        className={`font-thin text-[25px] transition-all duration-700 ease-out delay-[300ms] ${
+          isNavbarVisible
+            ? "opacity-100 translate-y-0"
+            : "opacity-0 translate-y-[-20px]"
+        }`}
+      >
+        BOHDAN{" "}
+        <span className="font-gilroyBold cursor-poiner">KONDRATSKYI</span>
       </h2>
       <ul className="flex items-center gap-14 text-xl">
-        <li>PROJECTS</li>
-        <li>ABOUT</li>
-        <li>CONTACT</li>
+        <li
+          className={`transition-all duration-700 ease-out delay-[400ms] cursor-pointer ${
+            isNavbarVisible
+              ? "opacity-100 translate-y-0"
+              : "opacity-0 translate-y-[-20px]"
+          }`}
+        >
+          PROJECTS
+        </li>
+        <li
+          className={`transition-all duration-700 ease-out delay-[500ms] cursor-pointer ${
+            isNavbarVisible
+              ? "opacity-100 translate-y-0"
+              : "opacity-0 translate-y-[-20px]"
+          }`}
+        >
+          ABOUT
+        </li>
+        <li
+          className={`transition-all duration-700 ease-out delay-[600ms] cursor-pointer ${
+            isNavbarVisible
+              ? "opacity-100 translate-y-0"
+              : "opacity-0 translate-y-[-20px]"
+          }`}
+        >
+          CONTACT
+        </li>
       </ul>
     </div>
   );
