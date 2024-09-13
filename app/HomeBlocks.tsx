@@ -12,6 +12,7 @@ import portraitImage from "./assets/portrait.png";
 const HomeBlocks = () => {
   const [isShrunk, setIsShrunk] = useState(false);
   const [isMoved, setIsMoved] = useState(false);
+  const [isBlockVisible, setIsBlockVisible] = useState(false);
 
   useEffect(() => {
     const shrinkTimer = setTimeout(() => {
@@ -22,19 +23,30 @@ const HomeBlocks = () => {
       setIsMoved(true);
     }, 1200);
 
+    const blockTimer = setTimeout(() => {
+      setIsBlockVisible(true);
+    }, 1400);
+
     return () => {
       clearTimeout(shrinkTimer);
       clearTimeout(moveTimer);
+      clearTimeout(blockTimer);
     };
   }, []);
   const primaryBlock = "bg-[#8FB4C7] rounded-xl";
   const secondaryBlock = "bg-[#274244] rounded-xl";
   return (
-    <div className="grid grid-cols-4">
+    <div className="grid grid-cols-4 overflow-hidden">
       <div className="gap-5 col-span-3">
         <div className="flex flex-col">
           <div className="flex gap-5 mb-5 h-[476px]">
-            <div className={`${primaryBlock} w-full h-full p-5 relative`}>
+            <div
+              className={`${primaryBlock} w-full delay-300 h-full p-5 relative transition-transform duration-700 ease-out ${
+                isBlockVisible
+                  ? "scale-100 translate-x-0 translate-y-0 opacity-100 ease-out"
+                  : "scale-0 translate-x-[50%]  opacity-0"
+              }`}
+            >
               <Image
                 src={flower1Image}
                 alt=""
@@ -50,17 +62,23 @@ const HomeBlocks = () => {
               alt="my photo"
               width={330}
               height={476}
-              className={`mr-5 transition-transform ease-in-out ${
-                isShrunk ? "scale-100 duration-500" : "scale-[1.2]"
+              className={`mr-5 transition-transform ease-out ${
+                isShrunk ? "scale-100 duration-1000" : "scale-[1.2]"
               } ${
                 isMoved
-                  ? "translate-x-0 translate-y-0 duration-1000 ease-in-out"
-                  : "translate-x-[-95%] translate-y-[20%]"
+                  ? "translate-x-0 translate-y-0 duration-[1500] ease-in"
+                  : "translate-x-[-80%] translate-y-[20%]"
               }`}
             />
           </div>
           <div className="flex gap-5 h-[273px]">
-            <div className={`${primaryBlock} w-full h-full relative p-5`}>
+            <div
+              className={`${primaryBlock} w-full h-full relative p-5 delay-150 transition-transform duration-700 ease-out ${
+                isBlockVisible
+                  ? "scale-100 translate-x-0 translate-y-0 opacity-100"
+                  : "scale-0 translate-x-[-50%] translate-y-[-50%] opacity-0"
+              }`}
+            >
               <Image
                 src={flower2Image}
                 width={38}
@@ -76,7 +94,11 @@ const HomeBlocks = () => {
               </p>
             </div>
             <div
-              className={`${secondaryBlock} w-full h-full mr-5 text-[#F9F1F0] p-5 relative cursor-pointer`}
+              className={`${secondaryBlock} w-full h-full mr-5 text-[#F9F1F0] p-5 relative cursor-pointer transition-transform duration-700 ease-out ${
+                isBlockVisible
+                  ? "translate-y-0 opacity-100"
+                  : "translate-y-[200%] opacity-0"
+              }`}
             >
               <div className="flex justify-between w-full">
                 <p className="w-[100px]">Have some questions?</p>
@@ -91,7 +113,11 @@ const HomeBlocks = () => {
       </div>
       <div className="flex flex-col gap-5 col-span-1">
         <div
-          className={`${primaryBlock} h-[649px] flex flex-col text-[25px] font-bold p-5`}
+          className={`${primaryBlock} h-[649px] flex flex-col text-[25px] font-bold p-5 transition-transform duration-700 ease-out ${
+            isBlockVisible
+              ? "scale-100 translate-x-0 translate-y-0 opacity-100"
+              : "scale-0 translate-x-[-50%] translate-y-[20%] opacity-0"
+          }`}
         >
           <div className="flex justify-between items-center mb-2 w-full">
             <p>GitHub</p>
@@ -105,7 +131,14 @@ const HomeBlocks = () => {
           <hr className="border-[#274244] mt-5 mb-5 border-t-[3px] rounded-xl" />
           <p className="cursor-pointer">Curriculum Vitae</p>
         </div>
-        <div className={`${primaryBlock} h-[100px] p-5`}>
+
+        <div
+          className={`${primaryBlock} h-[100px] p-5 transition-transform delay-100 duration-700 ease-out ${
+            isBlockVisible
+              ? "translate-x-0 opacity-100"
+              : "translate-x-full opacity-0"
+          }`}
+        >
           <div className="flex justify-center items-center gap-20 w-full h-full">
             <p className="cursor-pointer">INSTAGRAM</p>
             <p className="cursor-pointer">TELEGRAM</p>
