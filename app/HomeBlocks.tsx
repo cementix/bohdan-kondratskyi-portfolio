@@ -96,15 +96,59 @@ const HomeBlocks = () => {
                 width={38}
                 height={38}
                 alt=""
-                className="animate-spin-medium"
+                className={`transition-opacity duration-700 delay-[300ms] ease-out ${
+                  isBlockVisible ? "opacity-100" : "opacity-0"
+                } animate-spin-medium`}
               />
-              <p className="bottom-5 absolute w-[55%] text-lg">
-                Bohdan Kondratsky is a full-stack web developer based in
-                Wroclaw, Poland, who prefers remote work for its flexibility.
-                Disciplined and adaptable, he sees coding as a form of magic,
-                allowing him to create anything and positively impact others.
+              <p className="bottom-5 absolute w-[55%] text-md">
+                <span
+                  className={`block transition-all duration-500 delay-[800ms] ${
+                    isBlockVisible
+                      ? "opacity-100 translate-y-0"
+                      : "opacity-0 translate-y-4"
+                  }`}
+                >
+                  Bohdan Kondratsky is a full-stack web developer
+                </span>
+                <span
+                  className={`block transition-all duration-500 delay-[900ms] ${
+                    isBlockVisible
+                      ? "opacity-100 translate-y-0"
+                      : "opacity-0 translate-y-4"
+                  }`}
+                >
+                  based in Wroclaw, Poland, who prefers remote
+                </span>
+                <span
+                  className={`block transition-all duration-500 delay-[1000ms] ${
+                    isBlockVisible
+                      ? "opacity-100 translate-y-0"
+                      : "opacity-0 translate-y-4"
+                  }`}
+                >
+                  work for its flexibility. Disciplined and adaptable,
+                </span>
+                <span
+                  className={`block transition-all duration-500 delay-[1100ms] ${
+                    isBlockVisible
+                      ? "opacity-100 translate-y-0"
+                      : "opacity-0 translate-y-4"
+                  }`}
+                >
+                  he sees coding as a form of magic,
+                </span>
+                <span
+                  className={`block transition-all duration-500 delay-[1200ms] ${
+                    isBlockVisible
+                      ? "opacity-100 translate-y-0"
+                      : "opacity-0 translate-y-4"
+                  }`}
+                >
+                  allowing him to create anything and positively impact others.
+                </span>
               </p>
             </div>
+
             <div
               className={`${secondaryBlock} w-full h-full mr-5 text-[#F9F1F0] p-5 relative cursor-pointer transition-transform duration-700 ease-out ${
                 isBlockVisible
