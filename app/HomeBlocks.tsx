@@ -34,8 +34,8 @@ const HomeBlocks = () => {
     };
   }, []);
 
-  const primaryBlock = "bg-[#8FB4C7] rounded-xl";
-  const secondaryBlock = "bg-[#274244] rounded-xl";
+  const primaryBlock = "bg-[#E2E5D8] rounded-xl";
+  const secondaryBlock = "bg-[#7E8669] rounded-xl";
 
   return (
     <div className="grid grid-cols-4 overflow-hidden">
@@ -108,7 +108,7 @@ const HomeBlocks = () => {
                       : "opacity-0 translate-y-4"
                   }`}
                 >
-                  Bohdan Kondratsky is a full-stack web developer
+                  Bohdan Kondratskyi is a full-stack web developer
                 </span>
                 <span
                   className={`block transition-all duration-500 delay-[900ms] ${
@@ -228,7 +228,7 @@ const HomeBlocks = () => {
             height={293}
           />
           <hr
-            className={`border-[#274244] mt-5 mb-5 border-t-[3px] rounded-xl transition-all duration-700 ease-out delay-[700ms] ${
+            className={`border-[#000000] mt-5 mb-5 border-t-[3px] rounded-xl transition-all duration-700 ease-out delay-[700ms] ${
               isBlockVisible
                 ? "opacity-100 translate-x-0"
                 : "opacity-0 translate-x-[-100%]"
@@ -244,7 +244,7 @@ const HomeBlocks = () => {
             LeetCode
           </p>
           <hr
-            className={`border-[#274244] mt-5 mb-5 border-t-[3px] rounded-xl transition-all duration-700 ease-out delay-[900ms] ${
+            className={`border-[#000000] mt-5 mb-5 border-t-[3px] rounded-xl transition-all duration-700 ease-out delay-[900ms] ${
               isBlockVisible
                 ? "opacity-100 translate-x-0"
                 : "opacity-0 translate-x-[100%]"
@@ -260,7 +260,7 @@ const HomeBlocks = () => {
             CodeWars
           </p>
           <hr
-            className={`border-[#274244] mt-5 mb-5 border-t-[3px] rounded-xl transition-all duration-700 ease-out delay-[1100ms] ${
+            className={`border-[#000000] mt-5 mb-5 border-t-[3px] rounded-xl transition-all duration-700 ease-out delay-[1100ms] ${
               isBlockVisible
                 ? "opacity-100 translate-x-0"
                 : "opacity-0 translate-x-[-100%]"

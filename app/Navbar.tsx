@@ -14,7 +14,7 @@ const Navbar = () => {
 
   return (
     <div
-      className={`flex justify-between items-center bg-[#8FB4C7] mb-5 p-8 rounded-xl w-full h-[100px] transition-transform duration-700 ease-out ${
+      className={`flex justify-between items-center bg-[#E2E5D8] mb-5 p-8 rounded-xl w-full h-[100px] transition-transform duration-700 ease-out ${
         isNavbarVisible ? "scale-100 opacity-100" : "scale-0 opacity-0"
       }`}
     >
