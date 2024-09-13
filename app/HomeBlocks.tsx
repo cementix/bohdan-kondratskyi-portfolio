@@ -1,4 +1,7 @@
+"use client";
+
 import Image from "next/image";
+import { useEffect, useState } from "react";
 import arrowImage from "./assets/arrow.svg";
 import arrowBlackImage from "./assets/arrowBlack.svg";
 import flower1Image from "./assets/flower1.svg";
@@ -7,6 +10,23 @@ import githubImage from "./assets/github.png";
 import portraitImage from "./assets/portrait.png";
 
 const HomeBlocks = () => {
+  const [isShrunk, setIsShrunk] = useState(false);
+  const [isMoved, setIsMoved] = useState(false);
+
+  useEffect(() => {
+    const shrinkTimer = setTimeout(() => {
+      setIsShrunk(true);
+    }, 200);
+
+    const moveTimer = setTimeout(() => {
+      setIsMoved(true);
+    }, 1200);
+
+    return () => {
+      clearTimeout(shrinkTimer);
+      clearTimeout(moveTimer);
+    };
+  }, []);
   const primaryBlock = "bg-[#8FB4C7] rounded-xl";
   const secondaryBlock = "bg-[#274244] rounded-xl";
   return (
@@ -30,7 +50,13 @@ const HomeBlocks = () => {
               alt="my photo"
               width={330}
               height={476}
-              className="mr-5"
+              className={`mr-5 transition-transform ease-in-out ${
+                isShrunk ? "scale-100 duration-500" : "scale-[1.2]"
+              } ${
+                isMoved
+                  ? "translate-x-0 translate-y-0 duration-1000 ease-in-out"
+                  : "translate-x-[-95%] translate-y-[20%]"
+              }`}
             />
           </div>
           <div className="flex gap-5 h-[273px]">
