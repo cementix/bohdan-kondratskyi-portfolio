@@ -12,6 +12,14 @@ const config: Config = {
         background: "var(--background)",
         foreground: "var(--foreground)",
       },
+      fontFamily: {
+        gilroy: ["var(--font-gilroy-regular)"],
+        gilroyBold: ["var(--font-gilroy-bold)"],
+      },
+      animation: {
+        "spin-slow": "spin 20s linear infinite",
+        "spin-medium": "spin 10s linear infinite",
+      },
     },
   },
   plugins: [],
