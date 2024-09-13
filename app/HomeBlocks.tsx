@@ -33,8 +33,10 @@ const HomeBlocks = () => {
       clearTimeout(blockTimer);
     };
   }, []);
+
   const primaryBlock = "bg-[#8FB4C7] rounded-xl";
   const secondaryBlock = "bg-[#274244] rounded-xl";
+
   return (
     <div className="grid grid-cols-4 overflow-hidden">
       <div className="gap-5 col-span-3">
@@ -50,13 +52,23 @@ const HomeBlocks = () => {
               <Image
                 src={flower1Image}
                 alt=""
-                className="top-10 right-10 absolute animate-spin-slow"
+                className={`top-10 right-10 absolute animate-spin-slow transition-opacity duration-1000 delay-700 ease-out ${
+                  isBlockVisible ? "opacity-100" : "opacity-0"
+                }`}
               />
-              <h1 className="bottom-16 absolute w-[70%] font-extrabold text-[56px]">
+
+              <h1
+                className={`bottom-16 absolute w-[70%] font-extrabold text-[56px] transition-all duration-500 ease-out delay-[580ms] ${
+                  isBlockVisible
+                    ? "translate-y-0 opacity-100"
+                    : "translate-y-10 opacity-0"
+                }`}
+              >
                 Driven <span className="font-thin">Developer</span> Focused on
                 Web Breakthroughs
               </h1>
             </div>
+
             <Image
               src={portraitImage}
               alt="my photo"
