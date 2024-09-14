@@ -8,13 +8,13 @@ const Navbar = () => {
   useEffect(() => {
     const timer = setTimeout(() => {
       setIsNavbarVisible(true);
-    }, 1200);
+    }, 1500);
     return () => clearTimeout(timer);
   }, []);
 
   return (
     <div
-      className={`flex justify-between items-center bg-[#E2E5D8] mb-5 p-8 rounded-xl w-full h-[100px] transition-transform duration-700 ease-out ${
+      className={`flex justify-between items-center bg-[#E2E5D8] mb-5 p-8 rounded-xl w-full h-[100px] transition-transform duration-1000 ease-out ${
         isNavbarVisible ? "scale-100 opacity-100" : "scale-0 opacity-0"
       }`}
     >
@@ -22,7 +22,7 @@ const Navbar = () => {
         className={`font-thin text-[25px] transition-all duration-700 ease-out delay-[300ms] ${
           isNavbarVisible
             ? "opacity-100 translate-y-0"
-            : "opacity-0 translate-y-[-20px]"
+            : "opacity-0 translate-y-[-40px]"
         }`}
       >
         BOHDAN{" "}
@@ -33,7 +33,7 @@ const Navbar = () => {
           className={`transition-all duration-700 ease-out delay-[400ms] cursor-pointer ${
             isNavbarVisible
               ? "opacity-100 translate-y-0"
-              : "opacity-0 translate-y-[-20px]"
+              : "opacity-0 translate-y-[-40px]"
           }`}
         >
           PROJECTS
@@ -42,7 +42,7 @@ const Navbar = () => {
           className={`transition-all duration-700 ease-out delay-[500ms] cursor-pointer ${
             isNavbarVisible
               ? "opacity-100 translate-y-0"
-              : "opacity-0 translate-y-[-20px]"
+              : "opacity-0 translate-y-[-40px]"
           }`}
         >
           ABOUT
@@ -51,7 +51,7 @@ const Navbar = () => {
           className={`transition-all duration-700 ease-out delay-[600ms] cursor-pointer ${
             isNavbarVisible
               ? "opacity-100 translate-y-0"
-              : "opacity-0 translate-y-[-20px]"
+              : "opacity-0 translate-y-[-40px]"
           }`}
         >
           CONTACT

@@ -43,7 +43,7 @@ const HomeBlocks = () => {
         <div className="flex flex-col">
           <div className="flex gap-5 mb-5 h-[476px]">
             <div
-              className={`${primaryBlock} w-full delay-300 h-full p-5 relative transition-transform duration-700 ease-out ${
+              className={`${primaryBlock} w-full delay-300 h-full p-5 relative transition-all duration-700 ease-out ${
                 isBlockVisible
                   ? "scale-100 translate-x-0 translate-y-0 opacity-100 ease-out"
                   : "scale-0 translate-x-[50%]  opacity-0"
@@ -52,13 +52,13 @@ const HomeBlocks = () => {
               <Image
                 src={flower1Image}
                 alt=""
-                className={`top-10 right-10 absolute animate-spin-slow transition-opacity duration-1000 delay-700 ease-out ${
+                className={`top-10 right-10 absolute animate-spin-slow transition-all duration-1000 delay-[1200ms] ease-out ${
                   isBlockVisible ? "opacity-100" : "opacity-0"
                 }`}
               />
 
               <h1
-                className={`bottom-16 absolute w-[70%] font-extrabold text-[56px] transition-all duration-500 ease-out delay-[580ms] ${
+                className={`bottom-16 absolute w-[70%] font-extrabold text-[56px] transition-all duration-[1000ms] ease-out delay-[780ms] ${
                   isBlockVisible
                     ? "translate-y-0 opacity-100"
                     : "translate-y-10 opacity-0"
@@ -74,7 +74,7 @@ const HomeBlocks = () => {
               alt="my photo"
               width={330}
               height={476}
-              className={`mr-5 transition-transform ease-out ${
+              className={`mr-5 transition-all ease-out ${
                 isShrunk ? "scale-100 duration-1000" : "scale-[1.2]"
               } ${
                 isMoved
@@ -85,7 +85,7 @@ const HomeBlocks = () => {
           </div>
           <div className="flex gap-5 h-[273px]">
             <div
-              className={`${primaryBlock} w-full h-full relative p-5 delay-150 transition-transform duration-700 ease-out ${
+              className={`${primaryBlock} w-full h-full relative p-5 delay-150 transition-all duration-700 ease-out ${
                 isBlockVisible
                   ? "scale-100 translate-x-0 translate-y-0 opacity-100"
                   : "scale-0 translate-x-[-50%] translate-y-[-50%] opacity-0"
@@ -96,7 +96,7 @@ const HomeBlocks = () => {
                 width={38}
                 height={38}
                 alt=""
-                className={`transition-opacity duration-700 delay-[300ms] ease-out ${
+                className={`transition-all duration-700 delay-[300ms] ease-out ${
                   isBlockVisible ? "opacity-100" : "opacity-0"
                 } animate-spin-medium`}
               />
@@ -161,7 +161,7 @@ const HomeBlocks = () => {
                   className={`transition-all duration-700 ease-out delay-[300ms] ${
                     isBlockVisible
                       ? "opacity-100 translate-x-0"
-                      : "opacity-0 translate-x-[-20px]"
+                      : "opacity-0 translate-x-[-40px]"
                   }`}
                 >
                   Have some questions?
@@ -172,15 +172,15 @@ const HomeBlocks = () => {
                   className={`transition-all duration-700 ease-out delay-[500ms] ${
                     isBlockVisible
                       ? "opacity-100 translate-x-0"
-                      : "opacity-0 translate-x-[20px]"
+                      : "opacity-0 translate-x-[40px]"
                   }`}
                 />
               </div>
               <h2
-                className={`bottom-5 absolute font-extrabold text-[64px] transition-all duration-700 ease-out delay-[700ms] ${
+                className={`bottom-5 absolute font-extrabold text-[64px] transition-all duration-700 ease-out delay-[650ms] ${
                   isBlockVisible
                     ? "opacity-100 translate-y-0"
-                    : "opacity-0 translate-y-[10px]"
+                    : "opacity-0 translate-y-[50px]"
                 }`}
               >
                 Contact me
@@ -278,7 +278,7 @@ const HomeBlocks = () => {
         </div>
 
         <div
-          className={`${primaryBlock} h-[100px] p-5 transition-transform delay-100 duration-700 ease-out ${
+          className={`${primaryBlock} h-[100px] p-5 transition-all delay-100 duration-700 ease-out ${
             isBlockVisible
               ? "translate-x-0 opacity-100"
               : "translate-x-full opacity-0"
