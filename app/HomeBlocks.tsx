@@ -52,7 +52,7 @@ const HomeBlocks = () => {
               <Image
                 src={flower1Image}
                 alt=""
-                className={`top-10 right-10 absolute animate-spin-slow transition-all duration-1000 delay-[1200ms] ease-out ${
+                className={`top-10 right-10 absolute animate-spin-slow transition-all delay-[1200ms] ease-out ${
                   isBlockVisible ? "opacity-100" : "opacity-0"
                 }`}
               />
@@ -85,7 +85,7 @@ const HomeBlocks = () => {
           </div>
           <div className="flex gap-5 h-[273px]">
             <div
-              className={`${primaryBlock} w-full h-full relative p-5 delay-150 transition-all duration-700 ease-out ${
+              className={`${primaryBlock} w-full h-full relative p-5 delay-300 transition-all duration-700 ease-out ${
                 isBlockVisible
                   ? "scale-100 translate-x-0 translate-y-0 opacity-100"
                   : "scale-0 translate-x-[-50%] translate-y-[-50%] opacity-0"
@@ -96,7 +96,7 @@ const HomeBlocks = () => {
                 width={38}
                 height={38}
                 alt=""
-                className={`transition-all duration-700 delay-[300ms] ease-out ${
+                className={`transition-all delay-[300ms] ease-out ${
                   isBlockVisible ? "opacity-100" : "opacity-0"
                 } animate-spin-medium`}
               />
