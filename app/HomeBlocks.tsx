@@ -207,36 +207,42 @@ const HomeBlocks = () => {
                 : "opacity-0 translate-y-5"
             }`}
           >
-            <div className="flex justify-between items-center mb-2 w-full">
-              <p
-                className={`transition-all duration-700 ease-out delay-[300ms] ${
-                  isBlockVisible
-                    ? "opacity-100 translate-y-0"
-                    : "opacity-0 translate-y-5"
-                }`}
-              >
-                GitHub
-              </p>
+            <a
+              href="https://github.com/cementix"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <div className="flex justify-between items-center mb-2 w-full">
+                <p
+                  className={`transition-all duration-700 ease-out delay-[300ms] ${
+                    isBlockVisible
+                      ? "opacity-100 translate-y-0"
+                      : "opacity-0 translate-y-5"
+                  }`}
+                >
+                  GitHub
+                </p>
+                <Image
+                  src={arrowBlackImage}
+                  alt=""
+                  className={`transition-all duration-700 ease-out delay-[500ms] ${
+                    isBlockVisible
+                      ? "opacity-100 translate-y-0"
+                      : "opacity-0 translate-y-5"
+                  }`}
+                />
+              </div>
               <Image
-                src={arrowBlackImage}
+                src={githubImage}
                 alt=""
-                className={`transition-all duration-700 ease-out delay-[500ms] ${
+                className={`rounded-xl transition-all duration-700 ease-out delay-[600ms] ${
                   isBlockVisible
                     ? "opacity-100 translate-y-0"
                     : "opacity-0 translate-y-5"
                 }`}
+                height={293}
               />
-            </div>
-            <Image
-              src={githubImage}
-              alt=""
-              className={`rounded-xl transition-all duration-700 ease-out delay-[600ms] ${
-                isBlockVisible
-                  ? "opacity-100 translate-y-0"
-                  : "opacity-0 translate-y-5"
-              }`}
-              height={293}
-            />
+            </a>
             <hr
               className={`border-[#000000] mt-5 mb-5 border-t-[3px] rounded-xl transition-all duration-700 ease-out delay-[700ms] ${
                 isBlockVisible
@@ -245,7 +251,7 @@ const HomeBlocks = () => {
               }`}
             />
             <a
-              href="https://leetcode.com/subscribe/?ref=um_pl&source=ot"
+              href="https://leetcode.com/u/cementos"
               target="_blank"
               className={`cursor-pointer transition-all duration-700 ease-out delay-[800ms] ${
                 isBlockVisible
