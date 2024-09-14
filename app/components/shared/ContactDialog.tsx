@@ -36,11 +36,19 @@ const ContactDialog = ({
             href="https://www.linkedin.com/in/bohdan-kondratskyi-0a0443289/"
             target="_blank"
           >
-            <SocialIcon url="linkedin.com" className="scale-50" />
+            <SocialIcon
+              url="linkedin.com"
+              className="scale-50"
+              href="https://www.linkedin.com/in/bohdan-kondratskyi-0a0443289/"
+            />
             Bohdan Kondratskyi
           </a>
           <a className="text-xl" href="https://t.me/elcement" target="_blank">
-            <SocialIcon url="web.telegram.org" className="scale-50" />
+            <SocialIcon
+              url="web.telegram.org"
+              href="https://t.me/elcement"
+              className="scale-50"
+            />
             elcement
           </a>
           <a
@@ -48,7 +56,11 @@ const ContactDialog = ({
             href="https://www.instagram.com/cementix_/"
             target="_blank"
           >
-            <SocialIcon url="instagram.com" className="scale-50" />
+            <SocialIcon
+              url="instagram.com"
+              className="scale-50"
+              href="https://www.instagram.com/cementix_/"
+            />
             cementix_
           </a>
           <a
@@ -56,7 +68,11 @@ const ContactDialog = ({
             href="https://discordapp.com/users/cement._/"
             target="_blank"
           >
-            <SocialIcon url="discord.com" className="scale-50" />
+            <SocialIcon
+              url="discord.com"
+              href="https://discordapp.com/users/cement._/"
+              className="scale-50"
+            />
             cement._
           </a>
         </div>
