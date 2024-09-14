@@ -30,7 +30,7 @@ export default function RootLayout({
         <link rel="icon" href="/favicon.ico" />
       </head>
       <body
-        className={`${gilroyRegular.variable} ${gilroyBold.variable} antialiased p-7 2xl:overflow-hidden font-gilroy`}
+        className={`${gilroyRegular.variable} ${gilroyBold.variable} antialiased !p-7 2xl:overflow-hidden font-gilroy`}
       >
         <Navbar />
         {children}
