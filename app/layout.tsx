@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
+import Navbar from "./Navbar";
 
 const gilroyRegular = localFont({
   src: "./fonts/Gilroy-Regular.woff",
@@ -29,8 +30,9 @@ export default function RootLayout({
         <link rel="icon" href="/favicon.ico" />
       </head>
       <body
-        className={`${gilroyRegular.variable} ${gilroyBold.variable} antialiased`}
+        className={`${gilroyRegular.variable} ${gilroyBold.variable} antialiased p-7 2xl:overflow-hidden font-gilroy`}
       >
+        <Navbar />
         {children}
       </body>
     </html>
