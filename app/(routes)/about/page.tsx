@@ -10,6 +10,8 @@ const Page = () => {
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
+    window.scrollTo(0, 0);
+
     const timer = setTimeout(() => {
       setIsVisible(true);
     }, 300);
@@ -22,7 +24,7 @@ const Page = () => {
       <div className="flex lg:flex-row flex-col justify-center lg:justify-between items-center gap-3 w-full text-center lg:text-left">
         <div>
           <h2
-            className={`font-extrabold text-[64px] transition-all duration-700 ease-out ${
+            className={`font-extrabold text-[40px] lg:text-[64px] transition-all duration-700 ease-out ${
               isVisible
                 ? "opacity-100 translate-y-0"
                 : "opacity-0 -translate-y-10"
@@ -31,7 +33,7 @@ const Page = () => {
             Who I am
           </h2>
           <p
-            className={`max-w-full mx-11 lg:mx-0 lg:max-w-[85%] font-[20px] transition-all duration-700 ease-out delay-200 ${
+            className={`max-w-full lg:max-w-[85%] font-[20px] transition-all duration-700 ease-out delay-200 ${
               isVisible
                 ? "opacity-100 translate-y-0"
                 : "opacity-0 translate-y-10"
@@ -65,7 +67,7 @@ const Page = () => {
       <div className="lg:text-right flex lg:flex-row-reverse flex-col justify-center lg:justify-between items-center gap-3 mt-5 w-full text-center">
         <div className="max-w-full lg:max-w-[60%]">
           <h2
-            className={`font-extrabold text-[64px] transition-all duration-700 ease-out delay-400 ${
+            className={`font-extrabold text-[40px] lg:text-[64px] transition-all duration-700 ease-out delay-400 ${
               isVisible
                 ? "opacity-100 translate-y-0"
                 : "opacity-0 -translate-y-10"
@@ -115,7 +117,7 @@ const Page = () => {
       <div className="flex lg:flex-row flex-col justify-center lg:justify-between items-center gap-3 mt-5 w-full text-center lg:text-left">
         <div>
           <h2
-            className={`font-extrabold text-[64px] transition-all duration-700 ease-out delay-600 ${
+            className={`font-extrabold text-[40px] lg:text-[64px] transition-all duration-700 ease-out delay-600 ${
               isVisible
                 ? "opacity-100 translate-y-0"
                 : "opacity-0 -translate-y-10"

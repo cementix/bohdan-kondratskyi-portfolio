@@ -23,7 +23,7 @@ const Navbar = () => {
     >
       <Link
         href="/"
-        className={`font-thin text-[25px] transition-all duration-700 ease-out text-nowrap delay-[300ms] ${
+        className={`font-thin text-[15px] xs:text-[19px] md:text-[25px] transition-all duration-700 ease-out text-nowrap delay-[300ms] ${
           isNavbarVisible
             ? "opacity-100 translate-y-0"
             : "opacity-0 translate-y-[-40px]"
