@@ -31,6 +31,14 @@ const ContactDialog = ({
             />
             bodakondrackij@gmail.com
           </a>
+          <a
+            className="text-xl"
+            href="https://www.linkedin.com/in/bohdan-kondratskyi-0a0443289/"
+            target="_blank"
+          >
+            <SocialIcon url="linkedin.com" className="scale-50" />
+            Bohdan Kondratskyi
+          </a>
           <a className="text-xl" href="https://t.me/elcement" target="_blank">
             <SocialIcon url="web.telegram.org" className="scale-50" />
             elcement
@@ -50,14 +58,6 @@ const ContactDialog = ({
           >
             <SocialIcon url="discord.com" className="scale-50" />
             cement._
-          </a>
-          <a
-            className="text-xl"
-            href="https://www.linkedin.com/in/bohdan-kondratskyi-0a0443289/"
-            target="_blank"
-          >
-            <SocialIcon url="linkedin.com" className="scale-50" />
-            Bohdan Kondratskyi
           </a>
         </div>
       </DialogContent>
