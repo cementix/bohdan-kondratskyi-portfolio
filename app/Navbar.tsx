@@ -9,6 +9,7 @@ import ContactDialog from "./components/shared/ContactDialog";
 const Navbar = () => {
   const [isNavbarVisible, setIsNavbarVisible] = useState(false);
   const [isContactOpen, setIsContactOpen] = useState(false);
+  const [isSheetOpen, setIsSheetOpen] = useState(false);
 
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -74,8 +75,8 @@ const Navbar = () => {
         </ul>
 
         <div className="md:hidden">
-          <Sheet>
-            <SheetTrigger asChild>
+          <Sheet open={isSheetOpen} onOpenChange={setIsSheetOpen}>
+            <SheetTrigger onClick={() => setIsSheetOpen(true)} asChild>
               <button
                 className="font-bold text-xl focus:outline-none"
                 aria-label="Open menu"
@@ -85,9 +86,21 @@ const Navbar = () => {
             </SheetTrigger>
             <SheetContent side="right" className="bg-[#E2E5D8]">
               <div className="flex flex-col gap-6 p-6 font-bold text-3xl">
-                <Link href="/experience">EXPERIENCE</Link>
-                <Link href="/about">ABOUT</Link>
-                <Link href="/contact">CONTACT</Link>
+                <Link href="/experience" onClick={() => setIsSheetOpen(false)}>
+                  EXPERIENCE
+                </Link>
+                <Link href="/about" onClick={() => setIsSheetOpen(false)}>
+                  ABOUT
+                </Link>
+                <p
+                  className="cursor-pointer"
+                  onClick={() => {
+                    setIsContactOpen(true);
+                    setIsSheetOpen(false);
+                  }}
+                >
+                  CONTACT
+                </p>
               </div>
             </SheetContent>
           </Sheet>
