@@ -76,7 +76,7 @@ const Page = () => {
             Skills & Experience
           </h2>
           <p
-            className={`mx-11 lg:mx-0 font-[20px] transition-all duration-700 ease-out delay-600 ${
+            className={`lg:max-w-[85%] font-[20px] transition-all duration-700 ease-out delay-600 ${
               isVisible
                 ? "opacity-100 translate-y-0"
                 : "opacity-0 translate-y-10"
@@ -126,7 +126,7 @@ const Page = () => {
             Vision & Goals
           </h2>
           <p
-            className={`mx-11 lg:mx-0 lg:max-w-[85%] font-[20px] transition-all duration-700 ease-out delay-800 ${
+            className={`lg:max-w-[85%] font-[20px] transition-all duration-700 ease-out delay-800 ${
               isVisible
                 ? "opacity-100 translate-y-0"
                 : "opacity-0 translate-y-10"
