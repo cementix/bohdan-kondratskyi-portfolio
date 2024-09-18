@@ -16,7 +16,7 @@ const ContactDialog = ({
 }) => {
   return (
     <Dialog open={isContactOpen} onOpenChange={setIsContactOpen}>
-      <DialogContent>
+      <DialogContent className="max-sm:scale-[0.8]">
         <DialogHeader className="w-full">
           <DialogTitle className="text-5xl text-center">Contact me</DialogTitle>
           <DialogDescription className="text-center">

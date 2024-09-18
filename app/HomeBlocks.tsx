@@ -46,10 +46,10 @@ const HomeBlocks = () => {
         isContactOpen={isContactOpen}
         setIsContactOpen={setIsContactOpen}
       />
-      <div className="grid grid-cols-4 overflow-hidden">
+      <div className="grid grid-cols-1 lg:grid-cols-4 overflow-hidden">
         <div className="gap-5 col-span-3">
           <div className="flex flex-col">
-            <div className="flex gap-5 mb-5 h-[476px]">
+            <div className="flex lg:flex-row flex-col-reverse items-center gap-5 mb-5 h-[476px]">
               <div
                 className={`${primaryBlock} w-full delay-300 h-full p-5 relative transition-all duration-700 ease-out ${
                   isBlockVisible
@@ -66,7 +66,7 @@ const HomeBlocks = () => {
                 />
 
                 <h1
-                  className={`bottom-16 absolute w-[70%] font-extrabold text-[56px] transition-all duration-[1000ms] ease-out delay-[780ms] ${
+                  className={`bottom-16 absolute w-[70%] font-extrabold text-[56px] max-2xl:text-[45px] max-sm:text-[35px] transition-all duration-[1000ms] ease-out delay-[780ms] ${
                     isBlockVisible
                       ? "translate-y-0 opacity-100"
                       : "translate-y-10 opacity-0"
@@ -82,8 +82,8 @@ const HomeBlocks = () => {
                 alt="my photo"
                 width={330}
                 height={476}
-                className={`mr-5 transition-all ease-out ${
-                  isShrunk ? "scale-100 duration-1000" : "scale-[1.2]"
+                className={`mr-5 transition-all hidden lg:block ease-out ${
+                  isShrunk ? "lg:scale-100 duration-1000" : "lg:scale-[1.2]"
                 } ${
                   isMoved
                     ? "translate-x-0 translate-y-0 duration-[1500] ease-in"
@@ -91,7 +91,7 @@ const HomeBlocks = () => {
                 }`}
               />
             </div>
-            <div className="flex gap-5 h-[273px]">
+            <div className="flex lg:flex-row flex-col gap-5 h-[600px] lg:h-[273px]">
               <div
                 className={`${primaryBlock} w-full h-full relative p-5 delay-300 transition-all duration-700 ease-out ${
                   isBlockVisible
@@ -108,7 +108,7 @@ const HomeBlocks = () => {
                     isBlockVisible ? "opacity-100" : "opacity-0"
                   } animate-spin-medium`}
                 />
-                <p className="bottom-5 absolute w-[55%] text-md">
+                <p className="bottom-5 absolute w-[90%] lg:w-[65%] text-sm">
                   <span
                     className={`block transition-all duration-500 delay-[800ms] ${
                       isBlockVisible
@@ -159,7 +159,7 @@ const HomeBlocks = () => {
               </div>
 
               <div
-                className={`${secondaryBlock} w-full h-full mr-5 text-[#F9F1F0] p-5 relative cursor-pointer transition-all duration-700 ease-out ${
+                className={`${secondaryBlock} w-full h-full mb-5 mr-5 text-[#F9F1F0] p-5 relative cursor-pointer transition-all duration-700 ease-out ${
                   isBlockVisible
                     ? "opacity-100 translate-y-0"
                     : "opacity-0 translate-y-5"
@@ -187,7 +187,7 @@ const HomeBlocks = () => {
                   />
                 </div>
                 <h2
-                  className={`bottom-5 absolute font-extrabold text-[64px] transition-all duration-700 ease-out delay-[650ms] ${
+                  className={`bottom-5 absolute font-extrabold text-[64px] max-2xl:text-[50px] max-sm:text-[40px] transition-all duration-700 ease-out delay-[650ms] ${
                     isBlockVisible
                       ? "opacity-100 translate-y-0"
                       : "opacity-0 translate-y-[50px]"
@@ -306,7 +306,7 @@ const HomeBlocks = () => {
                 : "translate-x-full opacity-0"
             }`}
           >
-            <div className="flex justify-center items-center gap-20 w-full h-full">
+            <div className="flex justify-center items-center gap-[10%] w-full h-full">
               <a
                 href="https://www.instagram.com/cementix_/"
                 target="_blank"
